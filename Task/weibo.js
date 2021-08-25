@@ -257,9 +257,9 @@ function payinfo() {
 
 async function showmsg() {
     if (paybag) {
-        $.msg($.name, 'nickname' + (signcash ? signcash : ""), wbsign + paybag + docard);
+        $.msg($.name, $.getdata('wb_nick') + (signcash ? signcash : ""), wbsign + paybag + docard);
         if ($.isNode()) {
-            await notify.sendNotify($.name, 'nickname' + (signcash ? signcash : "") + '\n' + wbsign + paybag + docard)
+            await notify.sendNotify($.name, $.getdata('wb_nick') + (signcash ? signcash : "") + '\n' + wbsign + paybag + docard)
         }
     }
 }

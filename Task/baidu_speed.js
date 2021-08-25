@@ -2,8 +2,6 @@
 更新时间:2021-3-29 19:15
 百度极速版签到任务，使用脚本有黑号严重，请谨慎使用‼️
 
-赞赏:百度极速邀请码`RW9ZSW 点击链接立得红包，最高100元！https://dwz.cn/Oilv4CJ1`,农妇山泉 -> 有点咸，万分感谢，邀请码已失效
-
 本脚本已不再使用其他Cookie，内置自动提现，提现金额默认30元，当当前时间为早上6点且达到提现金额时仅运行提现任务，提现金额小于设置金额时继续运行其他任务。
 
 增加百度任务开关，Actions中Secrets为BAIDU_TASK，值填true或者false
@@ -26,7 +24,7 @@ let shower = $.getdata('on_baidu')||"true";
 
 let taskON = $.getdata(`task_baidu`)||"true"//除提现和兑换外其他任务开关;
 let isblack = "false";
-let UA = $.getdata('bd_Agent')||'Mozilla/5.0 (iPhone; CPU iPhone OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SP-engine/2.24.0 matrixstyle/0 light/1.0(WKWebView) themeUA=Theme/default info baiduboxapp/5.1.6.10 (Baidu; P2 14.2)';
+let UA = $.getdata('bd_Agent')||'Mozilla/5.0 (Linux; Android 10; PCCM00 Build/QKQ1.191021.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.159 Mobile Safari/537.36 light/1.0 SP-engine/0.0.0 matrixstyle/0 lite baiduboxapp/5.12.0.11 (Baidu; P1 10)';
 
 if (isGetCookie = typeof $request !== 'undefined') {
     GetCookie();

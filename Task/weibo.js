@@ -4,7 +4,7 @@
 本脚本仅适用于微博每日签到，支持多账号运行  
 
 
-获取ck: https:\/\/api\.weibo\.cn\/\d\/users\/show url script-request-header weibo.js
+获取ck: https://api.weibo.cn/2/users/show url script-request-header weibo.js
 */
 
 const $ = new Env('新浪微博')
@@ -133,9 +133,9 @@ function GetCookie() {
 function getsign() {
     return new Promise((resolve, reject) => {
         let signurl = {
-            url: `https://api.weibo.cn/2/checkin/add?c=iphone&`+token,
+            url: `https://api.weibo.cn/2/checkin/add?c=android&`+token,
             headers: {
-                "User-Agent": `Weibo/52588 (iPhone; iOS 14.5; Scale/3.00)`
+                "User-Agent": `PCCM00_10_weibo_11.8.2_android`
             }
         }
         $.get(signurl, async(error, resp, data) => {
@@ -257,9 +257,9 @@ function payinfo() {
 
 async function showmsg() {
     if (paybag) {
-        $.msg($.name, nickname + (signcash ? signcash : ""), wbsign + paybag + docard);
+        $.msg($.name, 'nickname' + (signcash ? signcash : ""), wbsign + paybag + docard);
         if ($.isNode()) {
-            await notify.sendNotify($.name, nickname + (signcash ? signcash : "") + '\n' + wbsign + paybag + docard)
+            await notify.sendNotify($.name, 'nickname' + (signcash ? signcash : "") + '\n' + wbsign + paybag + docard)
         }
     }
 }
